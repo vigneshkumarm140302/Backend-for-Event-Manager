@@ -5,7 +5,7 @@ from django.contrib.auth.models import User, AbstractUser
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
-    phone_number = models.CharField(unique=True, blank=True, null=True)  
+    phone_number = models.IntegerField(unique=True, blank=True, null=True)  
     profile_pic = models.ImageField(upload_to='images/', blank=True, null=True)  
 
     def __str__(self):
